@@ -1,0 +1,26 @@
+ JAVA GARBAGE COLLECTION::
+
+Java garbage collection is the process by which Java programs perform automatic memory management. 
+Java programs compile to bytecode that can be run on a Java Virtual Machine, or JVM for short. 
+When Java programs run on the JVM, objects are created on the heap, which is a portion of memory dedicated to the program. 
+Eventually, some objects will no longer be needed. The garbage collector finds these unused objects and deletes them to free up memory.
+
+
+
+
+
+IT'S WORKING FUNCION::
+Java garbage collection is an automatic process.
+ The programmer does not need to explicitly mark objects to be deleted. The garbage collection implementation lives in the JVM. 
+Each JVM can implement garbage collection however it pleases; the only requirement is that it meets the JVM specification. 
+Although there are many JVMs, Oracle’s HotSpot is by far the most common. It offers a robust and mature set of garbage collection options.
+
+While HotSpot has multiple garbage collectors that are optimized for various use cases, all its garbage collectors follow the same basic process. 
+In the first step, unreferenced objects are identified and marked as ready for garbage collection. 
+In the second step, marked objects are deleted. Optionally, memory can be compacted after the garbage collector deletes objects, so remaining objects are 
+in a contiguous block at the start of the heap.The compaction process makes it easier to allocate memory to new objects sequentially after the block of 
+memory allocated to existing objects.
+
+All of HotSpot’s garbage collectors implement a generational garbage collection strategy that categorizes objects by age. 
+The rationale behind generational garbage collection is that most objects are short-lived and will be ready for garbage collection soon after creation.
+
