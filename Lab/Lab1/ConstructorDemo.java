@@ -1,6 +1,6 @@
 class ConstructorDemo{
     int a;
-    public Sujit(){
+    public safal(){
         a = 10;
         System.out.println(a);
     }
